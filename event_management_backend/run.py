@@ -1,4 +1,7 @@
-from app import app
+from app import create_app
+
+app = create_app()
 
 if __name__ == "__main__":
-    app.run()
+    # Run on port 3001 for alignment with preview system
+    app.run(host="0.0.0.0", port=3001, debug=True)
